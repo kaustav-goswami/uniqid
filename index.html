@@ -1,31 +1,106 @@
 ---
-layout: home
-title: UniqID Bot Defense
-subtitle: Hardware-based bot detection and mitigation for secure, trusted online services
+layout: page
+title: UniqID Bot Detection
+subtitle: An AI cybersecurity company — hardware-backed bot scoring for server admins who need clarity, not guesswork
+full-width: true
+nav-short: true
+js:
+  - /assets/js/dashboard-demo.js
 ---
 
-<section class="home-intro">
-  <h1>Protect your app with our hardware-backed bot detection service.</h1>
-  <p>UniqID combines secure hardware attestation, device-level analysis, and rapid deployment to stop automated abuse before it reaches your application. Reduce fraud, block credential stuffing, and detect malicious bot traffic with a solution designed for mission-critical services.</p>
-  <p><strong>Hardware-based bot defense means your protection is rooted in a trusted device layer, not just software heuristics.</strong></p>
+<div class="uniqid-hero">
+  <div class="container">
+    <div class="uniqid-hero-grid">
+      <div class="uniqid-hero-content">
+        <div class="uniqid-badge">
+          <span class="pulse-dot"></span>
+          AI cybersecurity
+        </div>
+        <h1>See every visitor as a bot score — in real time.</h1>
+        <p class="lead">UniqID is an AI cybersecurity company that gives server admins a continuous float-valued bot probability for each session. Machine learning, hardware attestation, and device signals combine into one dashboard view so you can block automation before it hits your APIs.</p>
+        <div class="uniqid-cta-group">
+          <a class="btn-uniqid-primary" href="{{ '/get-started' | relative_url }}">Get Started</a>
+          <a class="btn-uniqid-secondary" href="{{ '/research' | relative_url }}">View Research</a>
+        </div>
+      </div>
+
+      <div class="dashboard-panel" aria-label="Admin dashboard preview">
+        <div class="dashboard-header">
+          <div class="dashboard-dots"><span></span><span></span><span></span></div>
+          <span class="dashboard-title">uniqid-console · production</span>
+          <span class="dashboard-status"><span class="pulse-dot"></span> LIVE</span>
+        </div>
+        <div class="dashboard-body">
+          <div class="dashboard-stats">
+            <div class="stat-card">
+              <div class="stat-label">Verified humans</div>
+              <div class="stat-value human" id="stat-human">847</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Bots blocked</div>
+              <div class="stat-value bot" id="stat-bot">23</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Sessions today</div>
+              <div class="stat-value neutral" id="stat-total">870</div>
+            </div>
+          </div>
+          <div class="dashboard-table-wrap">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Source IP</th>
+                  <th>Client</th>
+                  <th>Bot score</th>
+                  <th>Verdict</th>
+                </tr>
+              </thead>
+              <tbody id="visitor-rows"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="uniqid-section">
+  <div class="container">
+    <h2>AI-powered security for operators</h2>
+    <p class="section-sub">Every visitor gets a continuous bot probability from 0.000 (human) to 1.000 (bot). Set thresholds, route suspicious traffic for review, and keep legitimate users moving.</p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon blue"><i class="fas fa-microchip"></i></div>
+        <h3>Hardware attestation</h3>
+        <p>Validate device integrity with secure hardware roots instead of relying on spoofable browser signals alone.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon green"><i class="fas fa-chart-line"></i></div>
+        <h3>Float-valued scoring</h3>
+        <p>Granular bot probability per session — not binary pass/fail — so admins can tune policies with precision.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon purple"><i class="fas fa-bolt"></i></div>
+        <h3>Decisions within seconds</h3>
+        <p>Inline AI scoring at login, signup, and checkout endpoints without slowing down your user flows.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon orange"><i class="fas fa-brain"></i></div>
+        <h3>Research-backed AI models</h3>
+        <p>Detection pipelines informed by peer-reviewed work on bot characterization, device fingerprinting, and hardware trust.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="home-features">
-  <h2>Why choose UniqID</h2>
-  <ul>
-    <li><strong>Trusted device verification:</strong> Identify bots using hardware attestation and cryptographic device validation.</li>
-    <li><strong>Real-time threat blocking:</strong> Stop automated attacks instantly with low-latency decisioning.</li>
-    <li><strong>API-friendly integration:</strong> Add bot protection to your sign-up flows, login endpoints, and transaction systems.</li>
-    <li><strong>Minimal false positives:</strong> Preserve legitimate traffic while filtering malicious automation.</li>
-    <li><strong>Enterprise-ready support:</strong> Scalable coverage for web, mobile, and embedded access points.</li>
-  </ul>
-</section>
-
-<section class="home-cta">
-  <h2>Ready to secure your service?</h2>
-  <p>Explore pricing, learn how to get started, or reach out to our team.</p>
-  <p>
-    <a class="button" href="{{ '/pricing' | relative_url }}">See Pricing</a>
-    <a class="button button-secondary" href="{{ '/contact' | relative_url }}">Contact Us</a>
-  </p>
+<section class="uniqid-section" style="padding-top: 0;">
+  <div class="container text-center">
+    <h2>Ready to see your traffic clearly?</h2>
+    <p class="section-sub mx-auto">Explore pricing, read the research behind our AI models, or send us an enquiry.</p>
+    <div class="uniqid-cta-group justify-content-center">
+      <a class="btn-uniqid-primary" href="{{ '/pricing' | relative_url }}">See Pricing</a>
+      <a class="btn-uniqid-secondary" href="{{ '/contact' | relative_url }}">Contact Us</a>
+    </div>
+  </div>
 </section>
